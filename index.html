@@ -50,7 +50,7 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div class="navbar-menu">
+  <!-- <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="https://qianyi-zhang.github.io/">
       <span class="icon">
@@ -58,7 +58,7 @@
       </span>
       </a>
     </div>
-  </div>
+  </div> -->
 </nav>
 
 <section class="hero">
@@ -67,29 +67,8 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Follow Everything: A Leader-Following and Obstacle Avoidance Framework with Goal-Aware Adaptation</h1>
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://qianyi-zhang.github.io/">Qianyi Zhang</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.huawei.com/en/">Wentao Luo</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.huawei.com/en/">Ziyang Zhang</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.huawei.com/en/">Yaoyuan Wang</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://aien.nankai.edu.cn/2021/1108/c28086a418805/page.htm">Jingtai Liu</a><sup>1</sup>
-            </span>
-          </div> -->
           <div class="is-size-5 publication-authors">
-            <span class="author-block"> Anonymous</span>
-          </div>
-          
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Nankai University,</span>
-            <span class="author-block"><sup>2</sup>Huawei</span>
+            <span class="author-block"> Anonymous authors</span>
           </div>
 
           <div class="column has-text-centered">
@@ -133,22 +112,6 @@
     </div>
   </div>
 </section>
-
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section> -->
 
 
 <section class="hero is-light is-small">
@@ -244,13 +207,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In crowd navigation, the local goal plays a crucial role in trajectory initialization, optimization, and evaluation. Recognizing that when the global goal is distant, the robot's primary objective is avoiding collisions, making it less critical to pass through the exact local goal point, this work introduces the concept of <i>goal lines</i>, which extend the traditional local goal from a single point to multiple candidate lines. 
+            Robust and flexible leader-following is a critical capability for robots to integrate into human society. While existing methods struggle to generalize to leaders of arbitrary form and often fail when the leader temporarily leaves the robot's field of view, this work introduces a unified framework addressing both challenges. First, traditional detection models are replaced with a segmentation model, allowing the leader to be anything. To enhance recognition robustness, a distance frame buffer is implemented that stores leader embeddings at multiple distances, accounting for the unique characteristics of leader-following tasks. Second, a goal-aware adaptation mechanism is designed to govern robot planning states based on the leader’s visibility and motion, complemented by a graph-based planner that generates candidate trajectories for each state, ensuring efficient following with obstacle avoidance.
           </p>
           <p>
-            Coupled with a topological map construction strategy that groups obstacles to be as convex as possible, a goal-adaptive navigation framework is proposed to efficiently plan multiple candidate trajectories. 
+            Simulations and real-world experiments with a legged robot follower and various leaders (human, ground robot, UAV, legged robot, stop sign) in both indoor and outdoor environments show competitive improvements in follow success rate, reduced visual loss duration, and enhanced safety margins. In crowd navigation, the local goal plays a crucial role in trajectory initialization, optimization, and evaluation. Recognizing that when the global goal is distant, the robot's primary objective is avoiding collisions, making it less critical to pass through the exact local goal point, this work introduces the concept of <i>goal lines</i>, which extend the traditional local goal from a single point to multiple candidate lines. 
           </p>
           <p>
-            Simulations and experiments demonstrate that the proposed GA-TEB framework effectively prevents deadlock situations, where the robot becomes frozen due to a lack of feasible trajectories in crowded environments. Additionally, the framework greatly increases planning frequency in scenarios with numerous non-convex obstacles, enhancing both robustness and safety.          
           </p>
         </div>
       </div>
