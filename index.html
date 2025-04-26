@@ -218,8 +218,25 @@
   </div>
 </section>
 
-
-
+<!-- 三个video 一行 -->
+<style>
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .video-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  video {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+</style>
 
 <footer class="footer">
   <div class="container">
