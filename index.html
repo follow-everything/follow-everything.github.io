@@ -143,6 +143,16 @@
             <source src="./static/videos/exp5.mp4" type="video/mp4">
           </video>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="video-grid">
         <div class="video-item">
           <video poster="" id="mask" autoplay controls muted loop playsinline>
             <source src="./static/videos/dynamic.mp4" type="video/mp4">
@@ -177,7 +187,6 @@
     </div>
   </div>
 </section>
-
 
 
 
@@ -222,29 +231,19 @@
 <style>
   .video-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 默认每行3个视频 */
-    gap: 20px;  /* 设置视频项之间的间距 */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
-
   .video-item {
-    /* 可自定义视频项的样式 */
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-
-  .video-grid > .video-item:nth-child(4),  /* 第一行结束后（第4个） */
-  .video-grid > .video-item:nth-child(5) {
-    grid-column: span 2; /* 第二行开始时，前两个视频项跨2列 */
-  }
-
-  @media (max-width: 768px) {
-    .video-grid {
-      grid-template-columns: repeat(2, 1fr); /* 屏幕较小时，改为每行2个视频 */
-    }
-  }
-
-  @media (max-width: 480px) {
-    .video-grid {
-      grid-template-columns: 1fr; /* 屏幕更小时，改为每行1个视频 */
-    }
+  video {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 </style>
 
